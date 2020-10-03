@@ -1,0 +1,1551 @@
+@charset "utf-8";
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+ 全デバイス共通のスタイルとスマートフォンおよび小型タブレット向けレイアウトの指定
+/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_*/
+
+/*==========================================
+ body
+===========================================*/
+body {
+	width: 100%;
+	background-color: #FFF;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #000;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+/*------------------------------------------------------------
+	header hm_wrap
+------------------------------------------------------------*/
+.hm_menu_check {/* �`�F�b�N�{�b�N�X���B�� */
+	display: none;
+}
+.hm_wrap {
+	display: inline-block;
+	position : fixed;
+	top : 0;
+	left : 0;
+	width : 40%;
+	padding : 10px;
+}
+.hm_title {/* �n���o�[�K�[���j���[�I�[�v�����̌��o�� */
+	position: relative;
+	color: #999;
+	display: inline-block;
+	float: left;
+	font-weight: 100;
+	line-height: 30px;
+	margin: 0 0 0 15px;
+	opacity: 0;
+	-webkit-transform: translate3d(0, -15px, 0);
+	transform: translate3d(0, -15px, 0);
+	-webkit-transition: -webkit-transform 0.6s, opacity 0.5s;
+	transition: transform 0.6s, opacity 0.5s;
+	z-index: 2;
+}
+/* �������j���[�{�^������ */
+.hm_btn {
+	position: relative;
+	width: 27px;
+	height: 26px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	z-index: 2;
+}
+.hm_btn::before {
+	-webkit-box-shadow: #999 0 12px 0;
+	box-shadow: #999 0 12px 0;
+}
+.hm_btn::after {
+	bottom: 0;
+}
+.hm_btn::before, .hm_btn::after {
+	width: 30px;
+	height: 2px;
+	background: #999;
+	display: block;
+	content: '';
+	position: absolute;
+	-webkit-transition: -webkit-box-shadow 0.2s linear, -webkit-transform 0.2s 0.2s;
+	transition: box-shadow 0.2s linear, transform 0.2s 0.2s;
+}
+.hm_menu_wrap {
+	width : 100%;
+	height : 10000px;
+	background: #fff;
+	position: absolute;
+	left: -100%;
+	top: 0;
+	-webkit-transition: left 0.4s;
+	transition: left 0.4s;
+}
+.hm_menu_check:checked ~ .hm_title {
+	opacity: 1;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+.hm_menu_check:checked ~ .hm_btn::before {
+	-webkit-box-shadow: transparent 0 0 0;
+	box-shadow: transparent 0 0 0;
+	-webkit-transform: rotate(45deg) translate3d(6px, 11px, 0);
+	transform: rotate(45deg) translate3d(6px, 11px, 0);
+}
+.hm_menu_check:checked ~ .hm_btn::after {
+	-webkit-transform: rotate(-45deg) translate3d(6px, -11px, 0);
+	transform: rotate(-45deg) translate3d(6px, -11px, 0);
+}
+.hm_menu_check:checked ~ .hm_menu_wrap {
+	left: 0;
+}
+.hm_list {
+	list-style-type: none;
+	margin: 50px 0 0;
+	padding: 0;
+	color: #333;
+	font-family: 'FOT-�}���I�[���h���� Pro R', serif;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 17px;
+}
+.hm_list li a {
+	color: #333;
+	display: block;
+	overflow: hidden;
+	padding: 8px 22px;
+	position: relative;
+	text-decoration: none;
+	z-index: 1;
+}
+.hm_list li a::before {/* a�^�O�}�E�X�I�[�o�[���̔w�i */
+	background: #eee;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 100%;
+	left: 0;
+	-webkit-transition: bottom 0.4s;
+	transition: bottom 0.4s;
+	z-index: -1;
+}
+.hm_list li a:hover::before {
+	bottom: 0;
+}
+.hm_list li a:hover::after {
+	opacity: 0.5;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+/*------------------------------------------------------------
+	header gNavi
+------------------------------------------------------------*/
+header {
+	width: 100%;
+	height: 55px;
+	position: fixed;
+	z-index: 2;
+	left: 0px;
+	top: 0px;
+}
+.header-logo {
+	float: right;
+	margin: 0 0 0 0;
+	position: relative;
+}
+.headerWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: rgba(255,255,255,.8);
+}
+.NaviBox {
+	margin: 0px 0 0 0px;
+	padding: 0px 0 0 0;
+	display: block;
+}
+.contentBox {
+	position: relative;
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+ *zoom: 1;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #666666;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	-ms-filter: "alpha(opacity=70)";
+	z-index: 999;
+}
+#contents-bg {
+}
+.wrap {
+	overflow: hidden;
+}
+/*------------------------------------------------------------
+
+
+#contents-bg {
+  background-image: url(../image/topimg.jpg);
+	background-repeat: no-repeat;
+  background-size:contain;
+    width: 100%;
+    margin:0px auto 0;
+    padding:1em 1.5em;
+    line-height:1.5;
+    margin: 0 0 0px 0;
+    padding: 0 0 0px 0;
+}
+------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------
+	Pickup news
+------------------------------------------------------------*/
+
+.news {
+	font-family: 'Noto Serif', serif;
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-align: center;
+	padding: 70px 0 0 0;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.news-s {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	line-height: 3;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+	padding-bottom: 10px;
+}
+.news-contents {
+	width: auto;
+	overflow: hidden;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 0;
+
+}
+.news-contents li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 1% 30px 1%;
+	padding: 0;
+	text-align: left;
+}
+.picupnews {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.9rem;
+	letter-spacing: 0.1em;
+	line-height: 1.7;
+}
+.news-contents a:hover {
+	color: #A8A6A6;
+}
+.news-contents a {
+	text-decoration: none;
+	color: #333;
+}
+.newsimg {
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+	display: block;
+	height: auto;
+}
+.newsimg img {
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	width: 100%;
+}
+.news-wrap {
+	margin: 2% auto;
+	width: 96%;
+
+}
+.newscate {
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+
+}
+/*------------------------------------------------------------
+	�y�[�W�g�b�v��
+------------------------------------------------------------*/
+.yazirusi {
+	padding: 30px 0 0 0;
+	margin: 0 auto;
+	max-width: 100%;
+	text-align: left;
+}
+.yazirusinner {
+	width: 140px;
+	margin: auto;
+	text-align: center;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	line-height: 1;
+	color: #000;
+	text-rendering: optimizeLegibility;
+}
+.arrow2 {
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	border-color: #565656 #565656 transparent transparent;
+	transform: rotate(-45deg);
+	margin: auto;
+}
+.yazirusinner a {
+	text-decoration: none;
+}
+p span .pagetop {
+	color: #333;
+}
+.pagetop {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-align: center;
+}
+p span:hover {
+	color: #A8A6A6;
+}
+/*------------------------------------------------------------
+	footer
+------------------------------------------------------------*/
+#footer {
+	background-color: #fff;
+	margin: 70px 0 0 0;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.fBox {
+	padding: 60px 0 10px 0;
+}
+.fNavi {
+	margin: 0 auto;
+	max-width: 100%;
+	text-align: center;
+	list-style: none;
+	border-top: solid 1px #a4a4a4a6;
+}
+.fNavi ul li {
+	letter-spacing: 0.1em;
+	line-height: 2;
+	font-size: 12px;
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0px 60px 10px 0;
+}
+.fNavi ul li span.on {
+	cursor: pointer;
+}
+.fNavi ul li .subNavi {
+	display: none;
+}
+.fNavi ul li .subNavi ul {
+	margin: 3px 0 7px 15px;
+}
+.fNavi ul li .subNavi li {
+	padding: 11px 0 0 0;
+	font-size: 13px;
+}
+.fNavi ul li a, .sideBar .link a {
+	color: #333;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+}
+.fNavi ul li a::after, .sideBar .link a::after {
+	background-color: #555;
+	bottom: 0px;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right center 0;
+	transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	width: 100%;
+}
+.fNavi ul li a:hover::after, .sideBar .link a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center 0;
+	list-style: none;
+}
+.faddress {
+	line-height: 1.7;
+	width: 100%;
+	font-size: 11px;
+	color: #333;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	text-decoration: none;
+	font-style: normal;
+	margin: 0 0 0 0;
+}
+.footer-sns {
+	margin: 0 auto;
+	text-align: center;
+}
+.footer-sns ul li {
+	letter-spacing: 0.1em;
+	line-height: 2;
+	list-style: none;
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0px 5px 10px 0;
+}
+.globalFooter_copyright {
+	padding: 10px 0 10px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.globalFooter_copyright small {
+	color: #a4a4a4;
+	font-size: 10px;
+}
+.globalFooter_logoBox {
+	padding: 35px 0 15px 35px;
+	margin: 0;
+	width: 70%;
+	float: left;
+}
+.flogo {
+	padding: 35px 35px 35px 0px;
+	float: right;
+}
+.footerBox {
+	margin: 0 auto;
+	max-width: 100%;
+	display: block;
+	background-position: top;
+	background: url(http://yomogi.com/test/soilhp/image/fbg.jpg) left center no-repeat;
+	zoom: 1;
+	background-size: cover;
+}
+#header {
+	padding: 10px 0px 0px;
+	margin: 0px auto;
+	width: 400px;
+}
+#pagebody {
+	width: 970px;
+	margin: 0px auto;
+	padding: 0px;
+}
+.clear {
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+	font-size: 0px;
+	line-height: 0px;
+}
+/* clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	clear: both;
+	height: 0;
+}
+/* IE6 */
+* html .clearfix {
+	zoom: 1;
+}
+/* IE7 */
+*:first-child+html .clearfix {
+	zoom: 1;
+}
+/*------------------------------------------------------------
+	img:hover {
+	opacity: 0.5;
+}
+------------------------------------------------------------*/
+
+.textBox {
+	margin: 0 auto;
+	width: 100%;
+	list-style: none;
+}
+.general-comment {
+	width: 90%;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 0px 0px 0px 0px;
+	margin: 0 auto;
+}
+.comment {
+	padding: 20px 10px 10px 0px;
+	margin: 0 auto;
+	font-size: 0.8em;
+	overflow: hidden;
+	width: 90%;
+	line-height: 1.5;
+	height: 430px;
+	box-sizing: border-box;
+}
+.comment p {
+	padding: 0 2% 0 0;
+}
+.comment02 {
+	padding: 20px 20px 10px 0px;
+	margin: 0 auto;
+	font-size: 0.8em;
+	overflow: hidden;
+	width: 90%;
+	line-height: 1.5;
+	height: 430px;
+	box-sizing: border-box;
+}
+.comment02 p {
+	padding: 0 2% 0 0;
+}
+.aboutLead01 {
+	width: 20%;
+	padding: 20px 20px 0 0px;
+	font-size: 1.4em;
+	font-weight: 300;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.general-comment02 {
+	width: 90%;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	margin-bottom: 4em;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 0 0 0 0;
+	margin: 0 auto;
+}
+.aboutLead02 {
+	height: 320px;
+	width: 20%;
+	padding: 20px 30px 0 0px;
+	font-size: 1.4em;
+	font-weight: 300;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.yuukiimg {
+	width: 100px;
+	height: 100px;
+	margin: -40px -90px 0 0px;
+	padding: 0 0 0 0px;
+	display: block;
+	position: relative;
+	float: right;
+}
+.yuukiimg img {
+	width: 90%;
+	height: 90%;
+}
+.aboutimg02 {
+	padding: 20px 0px 0px 0px;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+}
+.aboutimg02 img {
+	margin: 0 auto;
+	padding: 0px;
+	width: 80%;
+}
+/*------------------------------------------------------------
+	cafe menu
+------------------------------------------------------------*/
+
+.Cmenu {
+	font-family: 'Noto Serif', serif;
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-align: center;
+	padding: 100px 0 0 0;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.Cmenu-s {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	line-height: 3;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.Cmenu-contents {
+	width: auto;
+	overflow: hidden;
+	list-style: none;
+	margin: 0 -1% 30px;
+	padding: 0;
+	font-size: 0;
+}
+.Cmenu-contents li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 1% 30px;
+	padding: 0;
+}
+.Cmenu-list {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.9rem;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+}
+
+@media (min-width: 390px) {
+.Cmenu-contents li {
+	width: 40%;
+}
+.Cmenu-list {
+	width: 40%;
+}
+.Cmenu-contents li:nth-child(2n+1) {
+	clear: both;
+}
+.Cmenuname {
+	width: 80%;
+}
+.CmenuDetail {
+	width: 80%;
+}
+.CmenuPrice {
+	width: 80%;
+}
+.Cmenurubi {
+	width: 80%;
+}
+}
+
+@media (min-width: 800px) {
+.Cmenu-contents li {
+	width: 31.3333%;
+}
+.Cmenu-list {
+	width: 31.3333%;
+}
+.Cmenu-contents li:nth-child(2n+1) {
+	clear: none;
+}
+.Cmenu-contents li:nth-child(3n+1) {
+	clear: both;
+}
+}
+
+
+
+.Cmenu-img {
+	margin: 0 0px 10px 0;
+	padding: 0 0 13px 0;
+	text-align: center;
+	display: block;
+	height: auto;
+}
+.Cmenu-img img {
+	width: 80%;
+	margin-bottom: 0.6em;
+	box-sizing: border-box;
+}
+.Cmenu-wrap {
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	width: 100%;
+	text-align : center;
+}
+.Cmenu-contentsBox {
+	margin: 12px auto;
+	padding: 0 0 0 0px;
+
+}
+.Cmenuname {
+	border-top: solid 1px;
+	text-align: left;
+	margin: 0 auto;
+	padding: 15px 3px 3px 3px;
+	font-size: 1.1em;
+	letter-spacing: 0em;
+	line-height: 1;
+	font-weight: 700;
+	width: 80%;
+}
+.Cmenurubi {
+	text-align: left;
+	margin: 0 auto;
+	padding: 0px 3px 0px 3px;
+	font-size: 0.6rem;
+	color: #747474;
+	width: 80%;
+}
+.CmenuDetail {
+	text-align: left;
+	margin: 20px auto;
+	padding: 0px 3px 0px 3px;
+	font-size: 0.8rem;
+	width: 80%;
+}
+.CmenuPrice {
+	text-align: left;
+	margin: 0 auto;
+	padding: 0 3px 15px 3px;
+	border-bottom: solid 1px;
+	width: 80%;
+}
+.Cmenu-comment {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 5% 0 5% 2%;
+	width: 90%;
+	overflow: hidden;
+}
+.CmenuLead01 {
+	width: 15%;
+	padding: 0px 0 0 0;
+	font-size: 1.2em;
+	font-weight: 300;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.Cmenucomment {
+	padding: 0 5% 5% 0;
+	margin: 0 auto;
+	font-size: 0.8em;
+	overflow: hidden;
+	line-height: 1.8;
+	max-height: 250px;
+	box-sizing: border-box;
+}
+.Cmenuimg {
+	background: url(../image/cmenuimg.jpg) no-repeat;
+	padding: 0px 0px 0px 0px;
+	margin: 50px 0px 0px 0px;
+	width: 700px;
+	float: right;
+}
+.google_map {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	width: 80%;
+	margin: 60px auto 0px auto;
+}
+.google_map iframe, .google_map object, .google_map embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.Cmenutitle {
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	font-size: 2.4em;
+	width: 20%;
+	padding: 0 3% 0 0;
+	margin: 0 0 0 0;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	position: relative;
+	font-weight: 300;
+}
+/*------------------------------------------------------------
+	cafe access
+------------------------------------------------------------*/
+
+.Cafeaccess {
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	font-size: 12px;
+	color: #333;
+	font-family: 'FOT-�}���I�[���h���� Pro R', serif;
+	text-decoration: none;
+	font-style: normal;
+	margin: 0 auto;
+	width: 80%;
+}
+.Caccess {
+	font-family: 'Noto Serif', serif;
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-align: center;
+	padding: 100px 0 0 0;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.Caccess-s {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	line-height: 3;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.Caccess-contents {
+	display: flex;
+	justify-content: space-between;
+}
+.Caccess-contents li {
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 15px 55px 20px 0px;
+	border-radius: 4px;
+}
+.Caccess-list {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.9rem;
+	letter-spacing: 0.1em;
+	line-height: 1.7;
+}
+.Caccess-img {
+	margin: 0 0 10px 0;
+	padding: 0 0 13px 0;
+	text-align: center;
+	border-bottom: solid 1px;
+}
+.Caccess-wrap {
+	margin: 0 0 0 0;
+	padding: 0 0 0 20px;
+}
+.Caccess-contentsBox {
+	margin: 18px 0 0 0;
+	padding: 0 0 0 0px;
+}
+.Caccessname {
+	width: 100%;
+	text-align: left;
+	margin: 0 0 0px 10px;
+	padding: 10px 0 0 0;
+	font-size: 1.2rem;
+	letter-spacing: 0.1em;
+	line-height: 1;
+}
+.Caccessrubi {
+	width: 100%;
+	text-align: left;
+	margin: 0 0 0px 10px;
+	font-size: 0.7rem;
+	color: #747474;
+}
+.CaccessDetail {
+	width: 100%;
+	text-align: left;
+	margin: 20px 0 20px 10px;
+	font-size: 0.8rem;
+}
+.CaccessPrice {
+	width: 100%;
+	text-align: left;
+	margin: 0 0 0px 0px;
+	padding: 0 0 15px 10px;
+	border-bottom: solid 1px;
+}
+.Caccess-comment {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	margin-left: 0px;
+	padding: 0px 0px 0px 0px;
+	float: right;
+}
+.CaccessLead01 {
+	width: 20%;
+	padding: 0px 20px 0 0px;
+	font-size: 1.2em;
+	font-weight: 300;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.Caccesstitle {
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	font-size: 1.2em;
+	width: 80%;
+	padding: 60px 0 10px 0px;
+	margin: 0 auto;
+}
+.map_btn {
+	font-family: 'FOT-}I[h¾© Pro R', serif;
+	color: #333;
+	width: 80%;
+	text-align: left;
+	padding: 20px 0px 0px 0;
+	    margin: 0 auto;
+	display: block;
+}
+.map_btn a {
+	text-decoration: none;
+	color: #333;
+}
+.map_btn a:hover {
+	color: #A8A6A6;
+}
+
+/* �����n���o�[�K�[���j���[����
+----------------------------------------------------
+@media screen and (min-width:480px) {
+  .hm_wrap {
+    display:none;
+  }
+}
+--- */
+
+
+
+
+@media (min-width: 390px) {
+.news-contents li {
+	width: 48%;
+	text-align: center;
+}
+.picupnews {
+	width: 40%;
+}
+.news-contents li:nth-child(2n+1) {
+	clear: both;
+	text-align: left;
+}
+
+.Cmenuname {
+	width: 80%;
+}
+.CmenuDetail {
+	width: 80%;
+}
+.CmenuPrice {
+	width: 80%;
+}
+.Cmenurubi {
+	width: 80%;
+}
+}
+
+@media (min-width: 570px) {
+.news-contents li {
+	width: 31.3333%;
+}
+.picupnews {
+	width: 31.3333%;
+}
+.news-contents li:nth-child(2n+1) {
+	clear: none;
+}
+.news-contents li:nth-child(3n+1) {
+	clear: both;
+}
+}
+
+
+@media screen and (min-width: 768px) {
+	a[href^="tel:"] {
+		pointer-events: none;
+	}
+
+}
+
+
+/*--画面サイズが769px以下のときsp--*/
+
+@media (max-width:854px) {
+.topcontents {
+	background-image: url(../image/topimg.jpg);
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+.topcontents-about {
+	background-image: url(../image/aboutimg.png);
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+	width: 100%;
+}
+.topcontents-menu {
+	background-image: url(../image/cmenuimg.png);
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+.topcontents-access {
+	background-image: url(../image/accessimg.png);
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+.soilname-sp {
+	background-image: url(../image/soilname.png);
+	background-repeat: no-repeat;
+	background-size: 50% auto;
+	width: 80%;
+	height: 50%;
+	margin: 50px 0 0 10px;
+	padding: 0px 0 0 0;
+	display: block;
+	position: absolute;
+	color: #898989;
+	float: left;
+}
+.topimg {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height: 300px;
+	display: inline-block;
+}
+
+
+}
+
+/*--画面サイズが769px以上のときpc--*/
+
+@media screen and (min-width:854px) {
+.header-pc-menu > li {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+.soilname {
+	background-image: url(../image/soilname.png);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	width: 500px;
+	height: 441px;
+	margin: 0px 0 0 80px;
+	padding: 0px 0 0 0;
+	display: block;
+	position: absolute;
+	color: #898989;
+	float: left;
+}
+.topimg01 {
+position: relative;
+padding: 60px 50px 0px 300px;
+box-sizing: border-box;
+width: 100%;
+max-height: 82vh;
+overflow: hidden;
+min-width: 1090px;
+}
+.topimg01 img {
+    width: 100%;
+}
+.topcontents {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+
+
+.NaviBox01 {
+position: absolute;
+top: 200px;
+left: 3vw;
+margin: 90px 0 0 0;
+text-align: center;
+z-index: 3;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+
+}
+.gNavi {
+	width: 19%;
+	margin: 400px 0 0 20px;
+	padding: 0px 0 0 0;
+	float: left;
+}
+.gNavi ul li {
+	padding: 0 0 17px 5px;
+	font-size: 17px;
+	list-style: none;
+}
+.gNavi ul li span.on {
+	cursor: pointer;
+}
+.gNavi ul li a {
+	color: #333;
+	font-family: 'FOT-�}���I�[���h���� Pro R', serif;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+}
+.gNavi ul li a::after {
+	background-color: #555;
+	bottom: 0px;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right center 0;
+	transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	width: 100%;
+}
+.gNavi ul li a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center 0;
+	list-style: none;
+}
+
+
+.logo {
+	margin: 60px 0 0 0;
+	padding: 0 0 0 0;
+	width: 25%;
+
+}
+/*------------------------------------------------------------
+	about
+------------------------------------------------------------*/
+.NaviBox {
+position: absolute;
+top: 300px;
+left: 3vw;
+text-align: center;
+z-index: 3;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.gNavi02 {
+	width: 19%;
+	margin: 6% 0 0 5%;
+	padding: 0px 0 0 0;
+	float: left;
+}
+.gNavi02 ul li {
+	padding: 0 0 17px 5px;
+	font-size: 17px;
+	list-style: none;
+}
+.gNavi02 ul li span.on {
+	cursor: pointer;
+}
+.gNavi02 ul li a {
+	color: #333;
+	font-family: 'FOT-�}���I�[���h���� Pro R', serif;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+}
+.gNavi02 ul li a::after {
+	background-color: #555;
+	bottom: 0px;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right center 0;
+	transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	width: 100%;
+}
+.gNavi02 ul li a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center 0;
+	list-style: none;
+}
+.aboutimg {
+position: relative;
+padding: 60px 80px 50px 300px;
+box-sizing: border-box;
+width: 100%;
+max-height: 68vh;
+overflow: hidden;
+min-width: 1090px;
+}
+.aboutimg img {
+width: 100%;
+max-width: 100%;
+height: auto;
+}
+.logo02 {
+	margin: 150px 0 10px 0;
+	padding: 0 0 0 0;
+	width: 25%;
+}
+.soilname-small {
+	background-image: url(../image/soilname-small.png);
+	background-repeat: no-repeat;
+	width: 280px;
+	height: 280px;
+	margin: -6% 0 0 81%;
+	padding: 0px 0 0 0;
+	display: block;
+	position: relative;
+	color: #898989;
+}
+.textBox {
+	margin: 5px auto 0 auto;
+	width: 90%;
+	max-width: 1000px;
+}
+.textBox02 {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1100px;
+}
+.general-comment {
+	width: 70%;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 0px 0px 0px 0px;
+	margin: 0 auto;
+	float: right;
+}
+.comment {
+	padding: 0px 0px 0px 0px;
+	margin: -25% 0 0 0;
+	font-size: 0.9em;
+	overflow: hidden;
+	line-height: 1.8;
+	height: 100%;
+	box-sizing: border-box;
+}
+.comment p {
+	padding: 0px 15px 0px 0px;
+}
+.aboutLead01 {
+	width: 17%;
+	padding: 0 180px 0 0;
+	margin: -230px 0 0 0;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1.6;
+	position: relative;
+}
+.aboutimg02 {
+	padding: 0px 0px 0px 0px;
+	margin: auto;
+	width: 30%;
+	float: right;
+}
+.aboutimg02 img {
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+}
+.yuukiimg {
+	width: 100px;
+	height: 100px;
+	margin: -40% 0px 0 0px;
+	padding: 0 0 0 0px;
+	display: block;
+	position: relative;
+	float: none;
+}
+.yuukiimg img {
+	width: 120%;
+	height: 120%;
+}
+.general-comment02 {
+	width: 52%;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	margin-bottom: 4em;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 0px 0px 0px 0px;
+	margin: 0 auto;
+	float: right;
+}
+.comment02 {
+	padding: 0px 0px 0px 0px;
+	margin: 0px -22% 0px 0px;
+	font-size: 0.9em;
+	overflow: hidden;
+	width: 80%;
+	line-height: 1.8;
+	height: 430px;
+	box-sizing: border-box;
+}
+.comment02 p {
+	padding: 0px 15px 0px 0px;
+}
+.aboutLead02 {
+	height: 340px;
+	width: 24%;
+	padding: 0px 0px 0 0px;
+	font-size: 1.5em;
+	font-weight: 400;
+	margin: -55% 0 0 0;
+	line-height: 1.6;
+}
+.soilname-small02 {
+	background-image: url(../image/soilname-small.png);
+	background-repeat: no-repeat;
+
+	width: 280px;
+	height: 280px;
+	margin: -500px 0 0 200px;
+	padding: 0 0 0 0px;
+	display: block;
+	position: absolute;
+	float: left;
+
+}
+.Cmenu-comment {
+	width: 22%;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 0px 0px 0px 0;
+	margin: 20px 0px 0px 0px;
+	float: right;
+}
+.Cmenu-contentsBox {
+	width: 75%;
+	margin: 5% 0 0 0;
+	padding: 0 0 0 0px;
+	float: left;
+}
+.Cmenutitle {
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	font-size: 2.4em;
+	width: 20%;
+	padding: 0px 0px 0px 0px;
+	margin: 600px 60px 0 0;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	position: relative;
+	font-weight: 300;
+	height: 300px;
+}
+.Cmenu-comment {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	padding: 0px 0px 0px 20px;
+	float: right;
+}
+.CmenuLead01 {
+	width: 20%;
+	padding: 0px 0px 0 0px;
+	font-size: 1.4em;
+	font-weight: 400;
+	margin: 0 -93px 0 0;
+	line-height: 1.5;
+}
+.Cmenucomment {
+	padding: 0px 0 0 0px;
+	margin: 8% 6% 0 0;
+	font-size: 0.8em;
+	overflow: hidden;
+	width: 80%;
+	line-height: 1.9;
+	max-height: 600px;
+	box-sizing: border-box;
+}
+
+/*--accessページ--*/
+.Caccess-contentsBox {
+	margin: 0px 0 0 0;
+	padding: 0 0 0 0px;
+	width: 50%;
+	float: right;
+}
+
+.Caccess-comment {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	line-height: 2.0;
+	margin-left: 0px;
+	padding: 20px 0px 0px 0px;
+	float: right;
+}
+.CaccessLead01 {
+	width: 20%;
+	padding: 0px 0px 0 0px;
+	font-size: 1.4em;
+	font-weight: 400;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.Caccesstitle {
+	font-family: "������", YuMincho, "�q���M�m���� ProN W3", "Hiragino Mincho ProN", "HG����E", "�l�r �o����", "�l�r ����", serif;
+	font-size: 1.2em;
+	width: 80%;
+	padding: 60px 0 10px 0px;
+	margin: 0px 0px 5px 0;
+}
+
+.Cafeaccess {
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	font-size: 12px;
+	color: #333;
+	font-family: 'FOT-�}���I�[���h���� Pro R', serif;
+	text-decoration: none;
+	font-style: normal;
+	margin: 220px 0px 5px 0;
+	width: 80%;
+	display:block;
+}
+
+.google_map {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	overflow: hidden;
+	width: 45%;
+	height: 0;
+	margin: 20px 0 0 0;
+}
+.google_map iframe, .google_map object, .google_map embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80%;
+}
+.map_btn {
+	font-family: 'FOT-}I[h¾© Pro R', serif;
+	color: #333;
+	width: 80%;
+	text-align: left;
+	padding: 20px 0px 0px 0;
+	margin: 0px 0px 5px 0;
+	font-size: 0.9em;
+
+}
+.map_btn a {
+	text-decoration: none;
+	color: #333;
+}
+.map_btn a:hover {
+	color: #A8A6A6;
+}
+
+/*------------------------------------------------------------
+	やじるし
+------------------------------------------------------------*/
+.yazirusi {
+	padding: 30px 0 0 0;
+	margin: 0 0 0 500px;
+	width: 200px;
+	float: right;
+}
+.yazirusinner {
+	width: 140px;
+	margin: auto;
+	text-align: center;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	line-height: 1;
+	color: #000;
+	text-rendering: optimizeLegibility;
+}
+.arrow2 {
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	border-color: #565656 #565656 transparent transparent;
+	transform: rotate(-45deg);
+	margin: auto;
+}
+.yazirusinner a {
+	text-decoration: none;
+}
+p span .pagetop {
+	color: #333;
+}
+.pagetop {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.7em;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-align: center;
+}
+p span:hover {
+	color: #A8A6A6;
+}
+
+}
+
+/*--非表示にしたい--*/
+@media screen and (min-width:854px) { /*--画面サイズが769px以上のときpc--*/
+#none {
+	display: none !important;
+}
+}              /*--none(固定メニューバー)を非表示にする--*/
+
+@media screen and (max-width:854px) {  /*--画面サイズが769px以下のときsp--*/
+#nonepc {
+	display: none !important;
+}
+}            /*--nonepc(トップに戻るボタン)を非表示にする--*/

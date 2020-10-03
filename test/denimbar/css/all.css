@@ -1,0 +1,35 @@
+.gheader__logo .simage--logo {
+    padding-top: 60px;
+}
+
+gheader__logo a {
+    transition: opacity .3s;
+}
+.simage--logo {
+    padding-top: 46px;
+    background-image: url(../image/soil_logo.png);
+
+}
+[class*=" simage--"], [class^="simage--"] {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+.gheader__gnav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: #fff;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    transition: all .4s;
+    opacity: 0;
+    visibility: hidden;
+}

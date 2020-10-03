@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ########## 共通 ########## */
+body{
+		background-image: url(./../image/denim-img03.png),/*イラスト*/
+		url(./../image/denim-img02.png);/*背景*/
+		background-repeat: no-repeat,repeat;
+		background-position: bottom left;/*center right*/
+		background-size: auto 70%,70% auto;
+		background-attachment: fixed;
+}
+
+.tbox{
+	color: #ffffff;
+}
+.tbox h1{
+	font-family: 'Cantata One', serif;
+}
+.tbox p{
+	text-align: justify;
+}
+
+
+/* ########## 1280px以上 ########## */
+@media screen and (min-width:1280px) {
+	body{
+		background-image: url(./../image/denim-img03.png),/*イラスト*/
+		url(./../image/denim-img04.png),/*ロゴ*/
+		url(./../image/denim-img02.png);/*背景*/
+		background-repeat: no-repeat,no-repeat,repeat;
+		background-position: bottom left,100% 15%;/*center right*/
+		background-size: auto 70%,10% auto,70% auto;
+		background-attachment: fixed;
+	}
+	
+	.tbox{
+		width: 30%;
+		margin: 10% auto 0px 40%;
+		line-height: 2.5;
+	}
+	.tbox h1{
+		font-size: 28px;
+		letter-spacing: 0.1em;
+		margin: 0px;
+		padding: 0px;
+	}
+	.tbox p{
+		font-size: 16px;
+		margin: 0px;
+		padding: 0px;
+	}
+}
+
+
+/* ########## 960px以上～1280px以下 ########## */
+@media screen and (min-width:970px) and ( max-width:1280px) {
+	body{
+		background-image: url(./../image/denim-img03.png),/*イラスト*/
+		url(./../image/denim-img02.png);/*背景*/
+
+		background-repeat: no-repeat,repeat;
+		background-position: bottom left,center right;
+		background-size: auto 70%,70% auto;
+		background-attachment: fixed;
+		/*overflow: hidden;*/
+	}
+	.tbox{
+		width: 70%;
+		margin: 5% auto 0px auto;
+		line-height: 2.2;
+	}
+	.tbox h1{
+		font-size: 28px;
+		letter-spacing: 0.1em;
+		margin: 0px;
+		padding: 0px;
+	}
+	.tbox p{
+		font-size: 16px;
+		margin: 0px;
+		padding: 0px;
+	}
+}
+
+
+/* ########## 600px以上～960px以下 ########## */
+@media screen and (min-width:600px) and ( max-width:970px) {
+	body{
+		background-image: url(./../image/denim-img03.png),/*イラスト*/
+		url(./../image/denim-img02.png);/*背景*/
+
+		background-repeat: no-repeat,repeat;
+		background-position: bottom left,center right;
+		background-size: auto 70%,70% auto;
+		background-attachment: fixed;
+		/*overflow: hidden;*/
+	}
+	.tbox{
+		width: 80%;
+		margin: 5% auto 0px 10%;
+		line-height: 2.2;
+	}
+	.tbox h1{
+		font-size: 28px;
+		letter-spacing: 0.1em;
+		margin: 0px;
+		padding: 0px;
+	}
+	.tbox p{
+		font-size: 16px;
+		margin: 0px;
+		padding: 0px;
+		text-shadow: 2px 2px 5px #000000;/*横 縦 ぼかし 影の色*/
+	}
+}
+
+
+/* ########## 480px以上～600px以下 ########## */
+/*@media screen and (min-width:480px) and ( max-width:600px) { */
+@media screen and ( max-width:600px) { 
+	body{
+		background-image: url(./../image/denim-img03.png),/*イラスト*/
+		url(./../image/denim-img02.png);/*背景*/
+
+		background-repeat: no-repeat,repeat;
+		background-position: bottom left,center right;
+		background-size: auto 70%,70% auto;
+		background-attachment: fixed;
+		/*overflow: hidden;*/
+	}
+	.tbox{
+		width: 90%;
+		margin: 5% auto 0px auto;
+		line-height: 1.8;
+		text-shadow: 2px 2px 5px #000000;/*横 縦 ぼかし 影の色*/
+	}
+	.tbox h1{
+		font-size: 40px;
+		letter-spacing: 0.1em;
+		margin: 0px;
+		padding: 0px;
+	}
+	.tbox p{
+		font-size: 16px;
+		margin: 0px;
+		padding: 0px;
+		text-shadow: 2px 2px 5px #000000;/*横 縦 ぼかし 影の色*/
+	}
+}
+
+
+
+
+
+
+	

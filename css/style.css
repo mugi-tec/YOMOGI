@@ -502,6 +502,9 @@ a {
 	border: 1px #231815 solid;
 	border-top: none;
 }
+.information p {
+	margin: 0;
+}
 .information .photo {
 	margin: 0 30px 0 0;
 }

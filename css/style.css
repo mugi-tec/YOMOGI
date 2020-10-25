@@ -502,9 +502,6 @@ a {
 	border: 1px #231815 solid;
 	border-top: none;
 }
-.information p {
-	margin: 0;
-}
 .information .photo {
 	margin: 0 30px 0 0;
 }
@@ -536,6 +533,10 @@ a {
 }
 .information span {
 	font-size: 12px;
+}
+.information .indent {
+	text-indent: -1em;
+	margin: 0 0 0 1em;
 }
 
 /* ----------shoplist--------------------------------------------------------------*/

@@ -6,21 +6,9 @@
 <meta http-equiv=content-language content=ja />
 <meta name="description" content="YOMOGIは良質な素材と個性的なデザインで、魅力あふれるワンランク上のおしゃれをご提案しています。" />
 <title>装いを楽しむ。着るを創作する。　|　yomogi</title>
-<link rel="stylesheet" type="text/css" href="css/style.css?date=20201026">
+<link rel="stylesheet" type="text/css" href="css/style.css?date=20201208">
 <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/mobilyslider.js" type="text/javascript"></script>
-<script src="js/init.js" type="text/javascript"></script>
-<script src="js/sm_scroll.js" type="text/javascript"></script>
-<!--[if lte IE 6]>
-<script src="js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
-<![endif]-->
-<!--[if lte IE 6]>
-<script type="text/javascript">
-  DD_belatedPNG.fix('body *');
-</script>
-<![endif]-->
-
+<script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
 <body>
@@ -31,10 +19,9 @@
         <ul>
   <li class="home"><a href="index.html">ホーム　<span class="en">Home</span></a></li>
   <li class="collection"><a href="collection.html">コレクション　<span class="en">Collection</span></a></li>
-   
   <li class="shop"><a href="list.html">ショップリスト　<span class="en">Shop List</span></a></li>
   <li class="companiy"><a href="companiy.html">会社情報　<span class="en">Companiy Profile</span></a></li>
-  <!--<li class="store"><a href="#">ショッピング　<span class="en">Online Store</span></a></li>-->
+  <li class="store"><a href="https://yomogi-inc.shop-pro.jp/" target="_blank">ショッピング　<span class="en">Online Store</span></a></li>
         </ul>
       </nav>
     </div>
@@ -95,7 +82,7 @@
         <li class="collection"><a href="collection.html">コレクション</a></li>
         <li class="shop"><a href="list.html">ショップリスト</a></li>
         <li class="companiy"><a href="companiy.html">会社概要</a></li>
-        <!--<li class="store"><a href="#">ショッピング</a></li>-->
+        <li class="store"><a href="https://yomogi-inc.shop-pro.jp/" target="_blank">ショッピング</a></li>
       </ul>
     </nav>
   </div>
@@ -103,6 +90,37 @@
   <div class="footerBox"> </div>
   <br class="clear" />
 </footer>
+
+<div class="scroll_banner_box">
+  <div class="scroll_banner_box_area">
+    <p class="banner"><a href="https://yomogi-inc.shop-pro.jp/" target="_blank"><img src="image/bnr_onlineshop.png" width="100%" alt="ONLINE SHOP"></a></p>
+    <p class="close"><a href="javascript:void(0);"><img src="image/bnr_close.png" width="100%" alt="CLOSE"></a></p>
+  </div>
+</div>
+
+<script>
+$(function() {
+  var bannerBox = $('.scroll_banner_box');
+  var closeFlag = false;
+  bannerBox.hide();
+  //スクロールが100に達したらバナー表示
+  $(window).scroll(function () {
+    if (closeFlag == true) {
+      return;
+    }
+    if ($(this).scrollTop() > 100) {
+      bannerBox.fadeIn('fast');
+    } else {
+      bannerBox.fadeOut('fast');
+    }
+  });
+  //クローズボタン
+  $('.scroll_banner_box .close').click(function(){
+    bannerBox.hide();
+    closeFlag = true;
+  });
+});
+</script>
 
 </body>
 </html>

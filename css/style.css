@@ -724,3 +724,31 @@ a {
 a img:hover {
 	opacity: 0.5;
 }
+
+/* scroll banner */
+/* ------------------------------------------------------------ */
+.scroll_banner_box {
+	position: fixed;
+	bottom: 100px;
+	right: 30px;
+	z-index: 10;
+}
+
+.scroll_banner_box .scroll_banner_box_area {
+	width: 300px;
+	position: relative;
+}
+
+.scroll_banner_box .scroll_banner_box_area .banner {
+	background: #fff;
+	width: 300px;
+	border: 1px #fff solid;
+}
+
+.scroll_banner_box .scroll_banner_box_area .close {
+	width: 20px;
+	position: absolute;
+	top: -11px;
+	right: -1px;
+	z-index: 11;
+}

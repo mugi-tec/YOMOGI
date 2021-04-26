@@ -1,0 +1,313 @@
+<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet" type="text/css">
+<div id="page-wrapper">
+  <{* 
+  <div class="visible-phone">
+    <div class="dropdown-wrapper header-link header-dropdown google-font">
+      <ul class="dropdown-nav">
+        <li class="view-cart"><a href="<{$view_cart_url}>"><span><i class="icon-w icon-cart"></i>view cart</span></a></li>
+        <li><a href="<{$home_url}>">home</a></li>
+        <li><a href="/?mode=srh&amp;cid=&amp;keyword=">all items</a></li>
+        <li><a href="<{$sk_url}>">ordering info</a></li>
+        <{if $manager_url != ""}><li><a href="<{$manager_url}>">blog</a></li><{/if}>
+        <li><a href="<{$view_inq_url}>">contact</a></li>
+        <!-- <li><a href="?mode=f1">freepage1</a></li> -->
+        <!-- <li><a href="?mode=f2">freepage2</a></li> -->
+      </ul>
+      <span class="btn-dropdown">menu<i class="icon-b icon-list pull-right"></i></span>
+    </div>
+  </div>
+  *}>
+  <div id="wrapper" class="container">
+    <{* 
+    <div id="header-wrapper">
+      <div class="row hidden-phone header-line-nav">
+        <ul class="inline pull-right google-font">
+          <li class="header-link">
+            <a href="<{$view_myaccount_url}>"><i class="icon-b icon-user"></i><span>my account</span></a>
+          </li>
+          <{if $members_use_flg == true}>
+            <{if $members_login_flg == false}>
+              <{if $members_register_flg == true}>
+                <li class="header-link">
+                  <a href="<{$members_regi_url}>"><i class="icon-b icon-adduser"></i><span>signup</span></a>
+                </li>
+              <{/if}>
+              <li class="header-link">
+                <a href="<{$members_login_url}>"><i class="icon-b icon-login"></i><span>login</span></a>
+              </li>
+            <{else}>
+              <li class="header-link">
+                <a href="<{$members_login_url}>"><i class="icon-b icon-logout"></i><span>logout</span></a>
+              </li>
+            <{/if}>
+          <{/if}>
+          <li class="view-cart">
+            <a href="<{$view_cart_url}>" class="btn-viewcart btn btn-01 clearfix">
+              <i class="icon-w icon-cart"></i><span><{$incart_total_count}> items</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <{if $incart != "" && $incart_delivery}>
+        <div class="incart-delivery">
+          <ul>
+            <{section name=num loop=$incart_delivery}>
+              <li>
+                <{$incart_delivery[num].delivery_name}>
+                <{if $incart_delivery[num].balance > 0}>：
+                  あと<b><{$incart_delivery[num].balance}>円</b>で<b>送料無料！</b>
+                <{else}>
+                  送料無料です！
+                <{/if}>
+              </li>
+            <{/section}>
+          </ul>
+        </div>
+      <{/if}>
+      <h1 id="header-logo" class="shop-name header-link"><a href="<{$home_url}>"><{$logo}></a></h1>
+      <!-- <p class="shop-description"><{$shop_name}></p> -->
+      <div id="header-global-nav" class="header-link google-font hidden-phone">
+        <ul class="inline">
+          <li><a href="<{$home_url}>">home</a></li>
+          <li><a href="/?mode=srh&amp;cid=&amp;keyword=">all items</a></li>
+          <li><a href="<{$sk_url}>">ordering info</a></li>
+          <{if $manager_url != ""}><li><a href="<{$manager_url}>">blog</a></li><{/if}>
+          <li><a href="<{$view_inq_url}>">contact</a></li>
+          <!-- <li><a href="?mode=f1">freepage1</a></li> -->
+          <!-- <li><a href="?mode=f2">freepage2</a></li> -->
+        </ul>
+      </div>
+    </div>
+    *}>
+		<header id="header">
+      <section class="common_header">
+        <div class="inner">
+          <h1>自然素材+染めと織り×オリジナルデザイン</h1>
+          <h2 class="logo"><a href="http://www.yomogi.com/"><img src="http://www.yomogi.com/images/logo_header.png" alt="創作衣料YOMOGI"></a></h2>
+        </div>
+      </section>
+      <div id="nav_toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="gloval_nav">
+        <nav>
+          <dl>
+            <dt><a href="http://www.yomogi.com/"><img src="http://www.yomogi.com/images/logo.png" alt="YOMOGI"></a></dt>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715295">ベスト</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715296">ブラウス </a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715297">ジャケット/アウター</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715299">チュニック</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715300">ワンピース</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715301">パンツ</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715302">スカート</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715303">アクセサリー</a></dd>
+            <dd><a href="http://shop.yomogi.com/?mode=myaccount">マイアカウント</a></dd>
+            <dd><a href="http://www.yomogi.com/shoplist">店舗一覧</a></dd>
+            <dd><a href="http://www.yomogi.com/corporation">会社概要</a></dd>
+            <dd><a href="https://yomogi-inc.shop-pro.jp/secure/?mode=inq&shop_id=PA01461468">お問い合わせ</a></dd>
+          </dl>
+        </nav>
+      </div>
+    </header>
+
+    <div class="title">
+      <h2><span>オンラインショップ</span>Online shop</h2>
+    </div>
+
+    <div id="container">
+      <{include file = $file_name}>
+    </div>
+
+    <{* 
+    <div id="footer-wrapper">
+      <div class="row">
+        <div class="col col-sm-12 col-lg-4 footer-primary">
+          <{if $free_area_flg == true}>
+            <ul class="footer-nav freepage-nav">
+              <{section name=num loop=$freepage}>
+                <li><a href="<{$freepage[num].link_url}>"><{$freepage[num].page_title}></a></li>
+              <{/section}>
+            </ul>
+          <{/if}>
+          <ul class="footer-nav">
+            <li><a href="<{$sk_url}>#payment">お支払い方法について</a></li>
+            <li><a href="<{$sk_url}>">配送方法・送料について</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-12 col-lg-8 row footer-secondary">
+          <ul class="col col-sm-12 col-lg-4 footer-nav">
+            <{if $manager_url != ""}><li><a href="<{$manager_url}>">ショップブログ</a></li><{/if}>
+            <li><a href="<{$privacy_url}>">プライバシーポリシー</a></li>
+            <li><a href="<{$sk_url}>#info">特定商取引法に基づく表記</a></li>
+          </ul>
+          <ul class="col col-sm-12 col-lg-4 footer-nav">
+            <li><a href="<{$view_cart_url}>">カートを見る</a></li>
+            <li class="hidden-phone"><a href="<{$rss_url}>">RSS</a>&nbsp;/&nbsp;<a href="<{$atom_url}>">ATOM</a></li>
+            <{if $mailmaga_url != ""}><li><a href="<{$mailmaga_url}>">メルマガ登録・解除</a></li><{/if}>
+          </ul>
+          <ul class="col col-sm-12 col-lg-4 footer-nav">
+            <li><a href="<{$view_myaccount_url}>">マイアカウント</a></li>
+            <{if $members_use_flg == true}>
+              <{if $members_login_flg == false}>
+                <{if $members_register_flg == true}><li><a href="<{$members_regi_url}>">会員登録</a></li><{/if}>
+                <li><a href="<{$members_login_url}>">ログイン</a></li>
+              <{else}>
+                <li><a href="<{$members_login_url}>">ログアウト</a></li>
+              <{/if}>
+            <{/if}>
+          </ul>
+        </div>
+      </div>
+      <!-- <ul class="social-nav inline">
+        <li><a href="#"><i class="icon-lg-b icon-twitter"></i></a></li>
+        <li><a href="#"><i class="icon-lg-b icon-facebook"></i></a></li>
+        <li><a href="#"><i class="icon-lg-b icon-instagram"></i></a></li>
+        <li><a href="#"><i class="icon-lg-b icon-mail"></i></a></li>
+      </ul> -->
+      <address class="copyright">
+        <{$e_copyright}>
+      </address>
+    </div>
+    *}>
+    <footer>
+      <div id="footeriti">
+        <h2>
+          <a href="http://shop.yomogi.com/"><img src="http://www.yomogi.com/images/logo.png" width="160" alt="YOMOGI"><span>自然素材+染めと織り×オリジナルデザイン</span></a>
+        </h2>
+        <div class="footertext_area clearfix">
+          <div class="footertext_left">
+            <h3>ヨモギ</h3>
+            <ul>
+              <li>所在地：〒710-0055 岡山県倉敷市阿知2-25-41<br><span>専用駐車場はございませんので近隣の駐車場（有料）をご利用ください。</span></li>
+              <li>電話番号：<tel><a href="tel:086-434-3883">086-434-3883</a></tel></li>
+            </ul>
+          </div>
+          <div class="footertext_right">
+            <h3>サイトマップ</h3>
+            <div class="sitemap clearfix">
+              <ul>
+                <li class="sp_mode"><a href="http://shop.yomogi.com/">Home</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715295">ベスト</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715296">ブラウス </a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715297">ジャケット/アウター</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715299">チュニック</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715300">ワンピース</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715301">パンツ</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715302">スカート</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=cate&csid=0&cbid=2715303">アクセサリー</a></li>
+              </ul>
+              <ul>
+                <li><a href="http://shop.yomogi.com/?mode=privacy">プライバシーポリシー</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=sk#info">特定商取引法に基づく表記</a></li>
+                <li><a href="http://shop.yomogi.com/?mode=myaccount">マイアカウント</a></li>
+                <li><a href="http://shop.yomogi.com/shoplist">店舗一覧</a></li>
+                <li><a href="http://shop.yomogi.com/corporation">会社概要</a></li>
+                <li><a href="https://yomogi-inc.shop-pro.jp/secure/?mode=inq&shop_id=PA01461468">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="copyright"><{$e_copyright}></p>
+        <p class="produce"><a href="http://machiaruki.com/bunkasozosha/" target="_blank">Produced by BUNKASOZOSHA Co.,Ltd.</a></p>
+      </div>
+    </footer>
+  </div>
+  <div id="pagetop" class="hidden-phone">
+    <a href="#wrapper" class="btn-pagetop btn btn-01"><i class="icon-lg-w icon-chevron_up"></i></a>
+  </div>
+</div>
+
+<script src="https://img.shop-pro.jp/tmpl_js/69/jquery.skOuterClick.js"></script>
+<script src="https://img.shop-pro.jp/tmpl_js/69/jquery.tile.js"></script>
+<script src="https://img.shop-pro.jp/tmpl_js/69/smoothscroll.js"></script>
+<script type="text/javascript">
+// viewport
+var viewport = document.createElement('meta');
+viewport.setAttribute('name', 'viewport');
+viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
+document.getElementsByTagName('head')[0].appendChild(viewport);
+$(function() {
+
+  // dropdown nav
+  $('.btn-dropdown').click(function () {
+    $(this).parent().children('.dropdown-nav').slideToggle('fast');
+    $(this).toggleClass('btn-dropdown-close');
+    $('.icon-list', this).toggleClass('icon-chevron_thin_up');
+  });
+  $('.dropdown-wrapper').skOuterClick(function () {
+      $('.dropdown-nav' ,this).slideUp('fast');
+      $('.btn-dropdown' ,this).removeClass('btn-dropdown-close');
+      $('.icon-list', this).removeClass('icon-chevron_thin_up');
+  });
+
+  function window_size_switch_func() {
+    // header dropdown nav position
+    $(window).scroll(function () {
+      var switch_pos = $('#page-wrapper').offset().top; 
+      if(switch_pos == 0) {
+        $('.header-dropdown').addClass('affix');
+      } else {
+        $('.header-dropdown').removeClass('affix');
+        if(switch_pos <= $(window).scrollTop()) {
+          $('.header-dropdown').addClass('affix');
+        } else {
+          $('.header-dropdown').removeClass('affix');
+        }
+      }
+    });
+    // product list
+    $(window).load(function () {
+      $('.prd-lst-unit').tile();
+      $('.grp-lst-unit').tile();
+    });
+    // product image
+    var thumb_size = $('.product-image-thumb li').width();
+    $('.product-image-thumb img').css('maxHeight', thumb_size - 4  + 'px');
+    $('.product-image-thumb li').css('height', thumb_size + 'px');
+    var main_size = $('.product-image-main').width();
+    if($('.visible-phone').css('display') == 'none') {
+      // pagetop
+      $(window).scroll(function () {
+        if($(this).scrollTop() > 200) {
+          $('#pagetop').fadeIn('fast');
+        } else {
+          $('#pagetop').fadeOut('fast');
+        }
+      });
+      // product option switch -> table
+      $('#prd-opt-table').html($('.prd-opt-table').html());
+      $('#prd-opt-table table').addClass('table-bordered');
+      $('#prd-opt-select').empty();
+      // product image
+      $('.product-image-main img').css('maxHeight', thumb_size * 5 + 100 + 'px');
+    } else {
+      // product option switch -> select
+      $('#prd-opt-table').empty();
+      if($('#prd-opt-select > *').size() == 0) {
+        $('#prd-opt-select').append($('.prd-opt-select').html());
+      }
+    }
+  }
+  window_size_switch_func();
+  $(window).resize(function () {
+    window_size_switch_func();
+  });
+
+  //ハンバーガーメニュー
+  $('#nav_toggle').on('click', function() {
+    $('body').toggleClass('open');
+  });
+
+});
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+  $(function (){
+    $('#wrapper').addClass('ie_wrapper');
+  });
+</script>
+<![endif]-->

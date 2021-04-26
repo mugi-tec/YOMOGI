@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+/* CSS Information
+---------------------------------------------------------------
+Site URL:http://www.yomogi.com/
+File name:index.css
+Summary:base styles
+Created:2021-4-9
+Last update:2021-4-9 by Sadaoka
+Author:	Sadaoka(BUNKASOZOSHA Co.,Ltd.)
+Copyright:(C) BUNKASOZOSHA Co.,Ltd.
+--------------------------------------------------------------- */
+
+@media screen and (min-width: 981px) {
+
+/* Header */
+/* ------------------------------------------------------------ */
+
+header section.mainvisual {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/mainvisual.png);
+}
+
+header section.mainvisual .inner {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header section.mainvisual h1.logo {
+    margin: 30px 0 0 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: drop-shadow(0 0 4px #000);
+}
+
+header section.mainvisual h2.catchphrase {
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    left: 0;
+}
+
+header section.mainvisual .catchphrase img {
+    width: auto;
+    height: 116px;
+    filter: drop-shadow(0 0 4px #000);
+}
+
+header section.mainvisual .icon {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+}
+
+header section.mainvisual .icon img {
+    width: 30px;
+    height: 66px;
+    filter: drop-shadow(0 0 4px #000);
+}
+
+header section.mainvisual .animation {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+}
+
+header section.mainvisual .keyframe {
+    animation-name: anim_v;
+}
+
+@keyframes anim_v {
+    0% {
+        transform: translate(0, 0px);
+    }
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+
+/* Headline */
+/* ------------------------------------------------------------ */
+main#index section .inner {
+    text-align: center;
+    width: 980px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+main#index section .inner h2 {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    margin-right: -0.03em;
+    display: inline-block;
+}
+
+main#index section .inner h2 span {
+    font-size: 18px;
+    position: relative;
+    display: block;
+    padding: 15px 0;
+}
+
+main#index section .inner h2 span::after {
+    content: "";
+    background: #231815;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/* Pickup */
+/* ------------------------------------------------------------ */
+main#index section.pickup {
+    background: #e4e0dc;
+}
+
+main#index section.pickup ul.pickuplists {
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+main#index section.pickup ul.pickuplists li {
+    width: 230px;
+}
+
+main#index section.pickup ul.pickuplists figure {
+    width: 230px;
+}
+
+main#index section.pickup ul.pickuplists figure img {
+    width: 100%;
+    height: auto;
+}
+
+main#index section.pickup ul.pickuplists figcaption {
+    line-height: 1.2;
+    margin: 15px 0 0;
+}
+
+/* Products */
+/* ------------------------------------------------------------ */
+main#index section.products {
+    background: #fff;
+}
+
+main#index section.products div.categorylists {
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main#index section.products div.categorylists article {
+    width: 480px;
+    margin: 60px auto 0;
+}
+
+main#index section.products div.categorylists article a {
+    color: #231815;
+    width: 480px;
+    height: 296px;
+    display: block;
+    position: relative;
+}
+
+main#index section.products div.categorylists article figure {
+    width: 480px;
+}
+
+main#index section.products div.categorylists article figure img {
+    width: 100%;
+    height: auto;
+}
+
+main#index section.products div.categorylists article figcaption {
+    background: rgb(255,255,255);
+    opacity: 0.8;
+    text-align: left;
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+main#index section.products div.categorylists article figcaption h3 {
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    margin-right: -0.03em;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+main#index section.products div.categorylists article figcaption h3 span {
+    position: relative;
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+}
+
+main#index section.products div.categorylists article figcaption h3 span::after {
+    content: "";
+    background: #231815;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main#index section.products div.categorylists article .description {
+    margin: 30px 0 0;
+}
+
+/* Coordination */
+/* ------------------------------------------------------------ */
+main#index section.coordination {
+    background: #e4e0dc;
+}
+
+main#index section.coordination ul.items {
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+main#index section.coordination ul.items li {
+    width: 230px;
+}
+
+main#index section.coordination ul.items figure {
+    width: 230px;
+}
+
+main#index section.coordination ul.items figure img {
+    width: 100%;
+    height: auto;
+}
+
+/* Information */
+/* ------------------------------------------------------------ */
+main#index section.information {
+    background: #fff;
+}
+
+main#index section.information article {
+    line-height: 1.7;
+    margin: 60px auto 0;
+}
+
+main#index section.information article h3 {
+	background: #231815;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 0;
+	padding: 5px 10px;
+}
+main#index section.information article .inboxflex {
+	background: #ffffff;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px;
+	border: 1px #231815 solid;
+	border-top: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+main#index section.information article .inbox {
+	background: #ffffff;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px;
+	border: 1px #231815 solid;
+	border-top: none;
+}
+main#index section.information article p {
+	margin: 0;
+}
+main#index section.information article .photo {
+	margin: 0 30px 0 0;
+}
+main#index section.information article a {
+	color: #231815;
+	text-decoration: underline;
+}
+main#index section.information article h4 {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+}
+main#index section.information article hr {
+	height: 1px;
+	margin: 20px 0;
+	padding: 0;
+	display: block;
+	border: 0;
+	border-top: 1px #231815 solid;
+}
+main#index section.information article ul {
+	margin: 20px auto 0;
+	padding: 0;
+}
+main#index section.information article ul li {
+	list-style-type: square;
+	margin: 0 0 0 1em;
+}
+main#index section.information article span {
+	font-size: 12px;
+}
+main#index section.information article .indent {
+	text-indent: -1em;
+	margin: 0 0 0 1em;
+}
+
+/* About */
+/* ------------------------------------------------------------ */
+main#index section.about {
+    color:#fff;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/about_bg.png);
+}
+
+main#index section.about h2 span::after {
+    background: #fff;
+}
+
+main#index section.about p {
+    line-height: 2;
+    margin: 60px auto 0;
+}
+
+}

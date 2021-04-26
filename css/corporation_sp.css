@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* CSS Information
+---------------------------------------------------------------
+Site URL:http://www.yomogi.com/
+File name:corporation_sp.css
+Summary:base styles
+Created:2021-4-9
+Last update:2021-4-9 by Sadaoka
+Author:	Sadaoka(BUNKASOZOSHA Co.,Ltd.)
+Copyright:(C) BUNKASOZOSHA Co.,Ltd.
+--------------------------------------------------------------- */
+
+@media screen and (max-width: 980px) {
+
+/* Contents */
+/* ------------------------------------------------------------ */
+main#corporation {
+}
+main#corporation .inner {
+    padding: 60px 10px;
+}
+main#corporation a {
+    color: #231815;
+}
+main#corporation .title {
+	background: url(../images/bg_header.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main#corporation section {
+	margin: 0 auto;
+    padding: 0;
+}
+main#corporation section .dllist {
+	margin: 0 0 0;
+}
+
+main#corporation section .dlbox {
+	width: 100%;
+    display: block;
+}
+
+main#corporation section .dlbox .dtbox {
+	color: #808080;
+	text-align: left;
+    width: 100%;
+	border-top: 1px #000 solid;
+	display: block;
+}
+
+main#corporation section .dlbox .ddbox {
+	text-align: left;
+	width: 100%;
+	border-top: 1px #bfbfbf solid;
+	display: block;
+}
+
+main#corporation section .dlbox:last-child .dtbox {
+	border-bottom: none;
+}
+
+main#corporation section .dlbox:last-child .ddbox {
+	border-bottom: 1px #000 solid;
+}
+
+main#corporation section .dlbox .wrap {
+    font-size: 14px;
+    line-height: 1.7;
+	padding: 5px 10px;
+}
+main#corporation .dlbox .inner {
+    line-height: 1.3;
+	padding: 15px;
+}
+
+main#corporation figure {
+    width: 100%;
+}
+
+main#corporation figure img {
+    width: 100%;
+	height: auto;
+}
+
+main#corporation section .tel {
+	background: #e2e0e1;
+	text-align: center;
+	color: #231815;
+	margin: 30px auto 0;
+	border: 1px #736a6c solid;
+}
+main#corporation section .tel a {
+	color: #231815;
+    text-decoration: none;
+}
+main#corporation section .tel h4 {
+	background: #736a6c;
+    color: #fff;
+	font-size: 12px;
+	padding: 5px 0;
+}
+main#corporation section .tel div {
+	padding: 10px 10px 10px;
+}
+main#corporation section .tel p {
+	font-size: 14px;
+}
+main#corporation section .tel .icon {
+	background: url(../images/icon_tel.svg) no-repeat 0 0;
+	background-size: 20px;
+	line-height: 20px;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 600;
+	padding: 0 0 0 30px;
+	display: inline-block;
+}
+main#corporation section .tel hr {
+	width: 70%;
+	height: 1px;
+	margin: 10px auto;
+	padding: 0;
+	display: block;
+	border: 0;
+	border-top: 1px #736a6c solid;
+}
+main#corporation section .tel .supplement {
+	font-size: 12px;
+}
+
+}

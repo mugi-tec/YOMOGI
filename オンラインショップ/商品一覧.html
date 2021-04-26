@@ -1,0 +1,81 @@
+<div id="product-srh">
+
+  <h2 class="google-font"><{$bid_name}></h2>
+
+  <{if $productlist_num != 0}>
+    <p class="prd-lst-sort">
+      <{if $productlist_sort_now != ""}>
+        <a href="<{$productlist_sort_def}>">おすすめ順</a><{else}>おすすめ順
+      <{/if}>
+      &nbsp;|&nbsp;
+      <{if $productlist_sort_now != "p"}>
+        <a href="<{$productlist_sort_price}>">価格順</a><{else}>価格順
+      <{/if}>
+      &nbsp;|&nbsp;
+      <{if $productlist_sort_now != "n"}>
+        <a href="<{$productlist_sort_new}>">新着順</a><{else}>新着順
+      <{/if}>
+    </p>
+    <ul class="row unstyled">
+      <{section name=num loop=$productlist}>
+        <li class="prd-lst-unit col col-xs-12 col-sm-6 col-lg-4">
+          <a href="<{$productlist[num].link_url}>" class="prd_lst_link">
+            <{if $productlist[num].img_url != ""}>
+              <img src="<{$productlist[num].img_url}>" class="prd-lst-img" alt="<{$productlist[num].name}>" />
+            <{else}>
+              <img src="http://img.shop-pro.jp/tmpl_img/69/prd_lst_noimage.png" class="prd-lst-img" alt="<{$productlist[num].name}>" />
+            <{/if}>
+          </a>
+          <span class="prd-lst-name prd-lst-span">
+            <a href="<{$productlist[num].link_url}>"><{$productlist[num].name}></a>
+          </span>
+          <{if $productlist[num].soldout_flg == false}>
+            <{if $members_login_flg == true && $productlist[num].discount_flg == true}>
+              <span class="prd-lst-regular prd-lst-span">
+                <{$productlist[num].regular_price}>
+              </span>
+            <{/if}>
+            <span class="prd-lst-price prd-lst-span">
+              <{$productlist[num].price}>
+            </span>
+            <{if $members_login_flg == true && $productlist[num].discount_flg == true}>
+              <span class="prd-lst-discount prd-lst-span">
+                <{$productlist[num].discount_rate}>OFF!!
+              </span>
+            <{/if}>
+          <{else}>
+            <span class="prd-lst-soldout prd-lst-span">
+              SOLD OUT
+            </span>
+          <{/if}>
+        </li>
+      <{/section}>
+    </ul>
+    <div class="prd-lst-pager google-font">
+      <ul class="inline">
+        <li>
+          <{if $productlist_prev_page == ""}>
+            <span class="btn btn-02 disabled">&laquo; Prev</span>
+          <{else}>
+            <a href="<{$productlist_prev_page}>" class="btn btn-02">&laquo; Prev</a>
+          <{/if}>
+        </li>
+        <li>
+          <{if $productlist_next_page == ""}>
+            <span class="btn btn-02 disabled">Next &raquo;</span>
+          <{else}>
+            <a href="<{$productlist_next_page}>" class="btn btn-02">Next &raquo;</a>
+          <{/if}>
+        </li>
+      </ul>
+      <p class="prd-lst-pos">
+        <b><{$productlist_num}></b><span>商品中</span>&nbsp;<b><{$productlist_snum}>-<{$productlist_enum}></b><span>商品</span>
+      </p>
+    </div>
+  <{else}>
+    <{if $subcategory_num == 0 && $subgroup_num == 0}>
+      <p class="prd-lst-none">該当する商品がありません</p>
+    <{/if}>
+  <{/if}>
+
+</div>

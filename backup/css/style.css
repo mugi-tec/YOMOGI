@@ -1,0 +1,754 @@
+@charset "shift-jis";
+html {
+	/*overflow: scroll;*/
+	/*width: 100%;*/
+	margin: 0px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+	font-style: normal;
+	line-height: 1.5;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 12px;
+	text-align: left;
+	/* bgcolor: #80273F; */
+	background: url(../image2014/bg.jpg) repeat;
+}
+.contents {
+}
+.topimgcontents {
+	height: 555px;
+	background: url('../image/yomogi_bg03.jpg') center center no-repeat;
+	background-size: cover;
+	padding: 0;
+	margin: 0 0px 100px 0px;
+}
+.topimgcontents02 {
+	height: 555px;
+	background: url('../image/yomogi_bg02.jpg') center center no-repeat;
+	background-size: cover;
+	padding: 0;
+	margin: 0 0px 130px 0px;
+}
+.naviBox {
+	margin: 0px 0 0 740px;
+	padding: 80px 0 0 0;
+	display: block;
+	position: absolute;
+	color: #898989;
+}
+.lead {
+	background-image: url(../image/lead-other.png);
+	background-repeat: no-repeat;
+	width: 85px;
+	height: 400px;
+	margin: 20px 0 0 550px;
+	padding: 0px 0 0 0;
+	display: block;
+	position: absolute;
+	color: #898989;
+}
+.topcontents {
+	margin: 0;
+	padding: 0;
+}
+/*------------------------------------------------------------
+	topページスライドショー
+------------------------------------------------------------*/
+.topimg {
+	padding: 90px 0px 0px 200px;
+	margin: 0px 0px 0px 0px;
+	width: 700px;
+}
+#stage {
+	position: relative;
+	width: 520px;
+	height: 500px;
+	margin: 0 auto;
+}
+#photo1, #photo2, #photo3 {
+	position: absolute;
+	width: 520px;
+	height: 500px;
+}
+#photo1 img, #photo2 img, #photo3 img {
+	opacity: 0;
+	-moz-animation: imgTrans 30s infinite;
+	-webkit-animation: imgTrans 30s infinite;
+	animation: imgTrans 30s infinite;
+}
+#photo1 img {
+	-moz-animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+#photo2 img {
+	-moz-animation-delay: 6s;
+	-webkit-animation-delay: 6s;
+	animation-delay: 6s;
+}
+#photo3 img {
+	-moz-animation-delay: 12s;
+	-webkit-animation-delay: 12s;
+	animation-delay: 12s;
+}
+#photo4 img {
+	-moz-animation-delay: 18s;
+	-webkit-animation-delay: 18s;
+	animation-delay: 18s;
+}
+#photo5 img {
+	-moz-animation-delay: 24s;
+	-webkit-animation-delay: 24s;
+	animation-delay: 24s;
+}
+#frame {
+	width: 520px;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+}
+@-webkit-keyframes imgTrans {
+ 0% {
+opacity:0;
+}
+ 5% {
+opacity:1;
+}
+ 20% {
+opacity:1;
+}
+ 25% {
+opacity:0;
+}
+ 100% {
+opacity:0;
+}
+}
+@-moz-keyframes imgTrans {
+ 0% {
+opacity:0;
+}
+ 5% {
+opacity:1;
+}
+ 20% {
+opacity:1;
+}
+ 25% {
+opacity:0;
+}
+ 100% {
+opacity:0;
+}
+}
+@keyframes imgTrans {
+ 0% {
+opacity:0;
+}
+ 5% {
+opacity:1;
+}
+ 20% {
+opacity:1;
+}
+ 25% {
+opacity:0;
+}
+ 100% {
+opacity:0;
+}
+}
+.yomogiLead {
+	width: 120px;
+	height: 10px;
+	margin: -530px 0 0 735px;
+	padding: 0px 0 0 0;
+	display: block;
+	position: absolute;
+}
+/*------------------------------------------------------------
+	gNavi
+------------------------------------------------------------*/
+.gNavi {
+	margin: 0px 0 0 180px;
+	padding: 0px 0 0 0;
+	writing-mode: tb-rl;
+	/* IE独自仕様 */
+	writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	line-height: 1.9;
+	letter-spacing: 0.03em;
+	text-indent: 1em;
+}
+.gNavi ul li {
+	list-style: none;
+	padding: 0 5px 5px 5px;
+	font-size: 17px;
+	text-align: left;
+}
+.gNavi ul li span.on {
+	cursor: pointer;
+}
+.gNavi ul li .subNavi {
+	display: none;
+}
+.gNavi ul li .subNavi ul {
+	margin: 3px 0 7px 15px;
+}
+.gNavi ul li .subNavi li {
+	padding: 11px 0 0 0;
+	font-size: 13px;
+}
+/* IE独自仕様 
+.gNavi ul li a, .sideBar .link a, #gFooter .lBox li a, #gFooter .rBox li a {
+	color: #333;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	text-decoration: none;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+.gNavi ul li a:hover {
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+*/
+
+.gNavi ul li a {
+	color: #333;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	text-decoration: none;
+	padding: 0 .3em;
+	background-image: linear-gradient(rgba(0,0,0,0) 50%, rgba(255,255,255,1) 50%);
+	background-position: 0 0;
+	background-size: auto 200%;
+	transition: .3s;
+}
+.gNavi ul li a span.en {
+	font-size: 11px;
+}
+#gFooter .lBox li a::after, #gFooter .rBox li a::after {
+	bottom: -1px;
+}
+.gNavi ul li a:hover {
+	background-position: 0 -100%;
+	color: #333;
+}
+/*------------------------------------------------------------
+	リード動きある
+------------------------------------------------------------*/
+
+/*---------------------------------
+ * firstview
+ ---------------------------------*/
+
+/*------------------------------------------------------------
+	Pickup news
+------------------------------------------------------------*/
+
+.news {
+	font-family: 'Noto Serif', serif;
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-align: center;
+	margin: 0 0 0 0;
+	padding: 100px 0 0 0;
+}
+.news-s {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	line-height: 3;
+	text-align: center;
+}
+.picupnews {
+	font-family: 'Noto Serif', serif;
+	font-size: 0.9rem;
+	letter-spacing: 0.1em;
+	line-height: 1.7;
+	list-style: none;
+	width: 33%;
+	margin: 30px 0 0 0;
+	float: left;
+	list-style: none;
+}
+.newsimg {
+	margin: 0 0 10px 0;
+}
+.news-wrap {
+	position: relative;
+	width: 100%;
+}
+.news-contents {
+	width: 80%;
+	margin: 0 auto;
+}
+.newscate {
+	width: 70%;
+}
+.logo {
+	margin: 35px 0 0 40px;
+	padding: 13px 0;
+	width: 200px;
+}
+/*------------------------------------------------------------
+	footer
+------------------------------------------------------------*/
+
+#fBox {
+	margin: 0 auto;
+	width: 88.7%;
+	max-width: 1220px;
+	padding: 0px 0px 0px 20px;
+}
+.fNavi {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0px;
+	float: right;
+}
+.fNavi ul li {
+	letter-spacing: 0.1em;
+	line-height: 2;
+	list-style: none;
+	font-size: 15px;
+	list-style: none;
+	float: left;
+}
+.fNavi ul li span.on {
+	cursor: pointer;
+}
+.fNavi ul li .subNavi {
+	display: none;
+}
+.fNavi ul li .subNavi ul {
+	margin: 3px 0 7px 15px;
+}
+.fNavi ul li .subNavi li {
+	padding: 11px 0 0 0;
+	font-size: 13px;
+}
+.fNavi ul li a, .sideBar .link a {
+	color: #333;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 0 30px 0 0;
+}
+.fNavi ul li a::after, .sideBar .link a::after {
+	background-color: #555;
+	bottom: 25px;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right center 0;
+	transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+	width: 100%;
+}
+.fNavi ul li a:hover::after, .sideBar .link a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center 0;
+	list-style: none;
+}
+.faddress {
+	letter-spacing: 0.1em;
+	line-height: 1.7;
+	width: 280px;
+	font-size: 12px;
+	float: right;
+	color: #333;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	text-decoration: none;
+	font-style: normal;
+	margin: 0 120px 30px 0;
+}
+#footer {
+	/* clearfix margin: 50px 0 0 0;
+	padding: 0px 0 0px;*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0 0 20px;
+}
+.footer-sns {
+	display: -webkit-flex;
+	display: flex;
+	margin: 0px 120px 0 0;
+	justify-content: flex-end;
+}
+li, ol, ul {
+	list-style-type: none;
+}
+.footer-sns li {
+	margin: 0 0 0 10px;
+	padding: 13px 0;
+}
+.footer-sns li a {
+	display: block;
+	-webkit-transition: opacity .2s ease;
+	transition: opacity .2s ease;
+}
+a {
+	background: 0 0;
+	text-decoration: none;
+	border: none;
+	outline: 0;
+}
+.globalFooter_copyright {
+	text-align: right;
+	margin: 20px 20px 0 0;
+	padding: 20px 0 0 0;
+}
+.globalFooter_copyright small {
+	color: #a4a4a4;
+	font-size: 10px;
+	margin: 0 100px 0px 0;
+}
+.globalFooter_logoBox {
+	float: right;
+	text-align: right;
+	margin-top: -3px;
+	width: 400px;
+}
+.logo {
+	margin: 50px 0 0 0px;
+	padding: 13px 0 0 120px;
+	width: 300px;
+}
+.footerBox {
+}
+#header {
+	padding: 10px 0px 0px;
+	margin: 0px auto;
+	width: 400px;
+}
+#pagebody {
+	width: 970px;
+	margin: 0px auto;
+	padding: 0px;
+}
+.clear {
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+	font-size: 0px;
+	line-height: 0px;
+}
+/* clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+/* IE6 */
+* html .clearfix {
+	zoom: 1;
+}
+/* IE7 */
+*:first-child+html .clearfix {
+	zoom: 1;
+}
+
+/* ----------新型コロナウイルス感染拡大防止への取り組み---------- */
+.information {
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	width: 90%;
+	margin: 0 auto 60px;
+	padding: 0;
+}
+.information h2 {
+	background: #231815;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 0;
+	padding: 5px 10px;
+}
+.information .inboxflex {
+	background: #ffffff;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px;
+	border: 1px #231815 solid;
+	border-top: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.information .inbox {
+	background: #ffffff;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px;
+	border: 1px #231815 solid;
+	border-top: none;
+}
+.information p {
+	margin: 0;
+}
+.information .photo {
+	margin: 0 30px 0 0;
+}
+.information a {
+	color: #231815;
+	text-decoration: underline;
+}
+.information h3 {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+}
+.information hr {
+	height: 1px;
+	margin: 20px 0;
+	padding: 0;
+	display: block;
+	border: 0;
+	border-top: 1px #231815 solid;
+}
+.information ul {
+	margin: 20px auto 0;
+	padding: 0;
+}
+.information ul li {
+	list-style-type: square;
+	margin: 0 0 0 1em;
+}
+.information span {
+	font-size: 12px;
+}
+.information .indent {
+	text-indent: -1em;
+	margin: 0 0 0 1em;
+}
+
+/* ----------shoplist--------------------------------------------------------------*/
+
+.shop_info_block {
+	overflow: hidden;
+	clear: both;
+	padding: 5px 0;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+}
+#shoplist .archive_post ul {
+	padding-bottom: 0px;
+}
+#shoplist .shop_info {
+	width: 100%;
+	float: left;
+}
+.shop_ja {
+	padding-bottom: 20px;
+}
+#shoplist .shop_info h3 {
+	font-size: 16px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+#shoplist .shop_info .shop_en h3 {
+	font-weight: normal;
+}
+#shoplist .shop_address, #shoplist .shop_tel {
+	font-size: 12px;
+	line-height: 1.5;
+}
+#shoplist a:link {
+	color: #000000;
+	text-decoration: none;
+}
+#shoplist .content {
+	width: 800px;
+	padding: 70px 0px 0px 110px;
+}
+#shoplist .archive_post {
+	width: 300px;
+	text-align: left;
+	float: left;
+	background: #ffffff;
+}
+#shoplist .map {
+	width: 350px;
+	padding: 10px 0 0 30px;
+	float: left;
+	background: #ffffff;
+}
+.map_btn a:link a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+.map_btn:hover {
+	opacity: 0.5;
+}
+.Shoplead {
+	background-image: url(../image/lead-other.png);
+	background-repeat: no-repeat;
+	width: 113px;
+	height: 430px;
+	margin: 0px 0 00px;
+	padding: 0px 0 0 0;
+	display: block;
+	color: #898989;
+	float: right;
+	vertical-align: top;
+}
+.shoplistlogo {
+	margin: 0 0 0 0;
+	padding: 0 0 0 45px;
+	float: left;
+}
+
+/* ----------company--------------------------------------------------------------*/
+
+.company {
+	width: 680px;
+	text-align: left;
+	background: #ffffff;
+	overflow: hidden;
+	padding: 5px 0px 150px 0px;
+	font-family: 'FOT-筑紫オールド明朝 Pro R', serif;
+	display: flex;
+	justify-content: space-between;
+}
+.company dl {
+	/*width: 350px;*/
+}
+.c-Content {
+	/*width: 400px;*/
+	padding: 30px 0 0 40px;
+}
+.company dt {
+	padding: 0px 0 20px 0;
+	/*line-height: 180%;*/
+	clear: left;
+	float: left;
+	width: 6em;
+	font-weight: 700;
+}
+.company dd {
+	/*width: 240px;*/
+	float: left;
+	text-align: left;
+}
+.companyPhoto {
+	padding: 180px 40px 0 20px;
+	background: #ffffff;
+}
+.companyimg {
+}
+
+.kuuhaku{
+	padding: 0 0 0 40px;
+	margin: 20px 0 0 0px;
+}
+
+/* ----------collection--------------------------------------------------------------*/
+
+.Colllead {
+	background-image: url(../image/lead-collection.png);
+	background-repeat: no-repeat;
+	width: 152px;
+	height: 400px;
+	margin: 0px 0 00px;
+	padding: 0px 0 0 0;
+	display: block;
+	color: #898989;
+	float: right;
+}
+.Collpoint {
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 30px;
+	margin: 185px 20px 0 0;
+	padding: 0px 0 0 0;
+	display: block;
+	color: #898989;
+	float: right;
+}
+.collBox {
+	width: 800px;
+	background: #ffffff;
+	margin: 0 auto;
+}
+.collBox ul li {
+	width: 120px;
+	height: 190px;
+	float: left;
+	overflow: hidden;
+	margin: 0 0 0 0;
+}
+.collBox02 {
+	width: 800px;
+	padding: 0px 0 0 120px;
+	margin: 0 auto;
+}
+.collBox02 ul li {
+	width: 120px;
+	height: 190px;
+	float: left;
+	overflow: hidden;
+	margin: 0 0 0 0;
+}
+.down {
+	padding: 55px 0 0 0;
+	margin: 0 0 0 0;
+}
+#Collection .archive_post {
+	width: 300px;
+	text-align: left;
+	float: left;
+}
+#Collection .content {
+	width: 800px;
+	padding: 70px 0px 0px 110px;
+}
+a img:hover {
+	opacity: 0.5;
+}
+
+/* scroll banner */
+/* ------------------------------------------------------------ */
+.scroll_banner_box {
+	position: fixed;
+	bottom: 100px;
+	right: 30px;
+	z-index: 10;
+}
+
+.scroll_banner_box .scroll_banner_box_area {
+	width: 300px;
+	position: relative;
+}
+
+.scroll_banner_box .scroll_banner_box_area .banner {
+	background: #fff;
+	width: 300px;
+	border: 1px #fff solid;
+}
+
+.scroll_banner_box .scroll_banner_box_area .close {
+	width: 20px;
+	position: absolute;
+	top: -11px;
+	right: -1px;
+	z-index: 11;
+}

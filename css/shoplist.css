@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* CSS Information
+---------------------------------------------------------------
+Site URL:http://www.yomogi.com/
+File name:shoplist.css
+Summary:base styles
+Created:2021-4-9
+Last update:2021-4-9 by Sadaoka
+Author:	Sadaoka(BUNKASOZOSHA Co.,Ltd.)
+Copyright:(C) BUNKASOZOSHA Co.,Ltd.
+--------------------------------------------------------------- */
+
+@media screen and (min-width: 981px) {
+
+/* Contents */
+/* ------------------------------------------------------------ */
+main#shoplist {
+}
+main#shoplist .inner {
+    padding: 0 0 120px;
+}
+main#shoplist a {
+    color: #231815;
+}
+main#shoplist .title {
+	background: url(../images/bg_header.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main#shoplist section {
+	width: 980px;
+	margin: 0 auto;
+    padding: 0;
+}
+
+main#shoplist section article {
+	margin: 60px 0 0;
+}
+main#shoplist .dllist {
+    width: 740px;
+    margin: 0;
+	float: right;
+}
+main#shoplist .dlbox {
+	width: 100%;
+	display: table;
+}
+main#shoplist .dlbox .dtbox {
+	color: #8b8887;
+	text-align: left;
+	width: 140px;
+	border-top: 1px #433e3d solid;
+	display: table-cell;
+	vertical-align: top;
+}
+main#shoplist .dlbox .ddbox {
+	text-align: left;
+
+	border-top: 1px #c5c3c3 solid;
+	display: table-cell;
+}
+main#shoplist .dlbox:last-child .dtbox {
+	border-bottom: 1px #433e3d solid;
+}
+main#shoplist .dlbox:last-child .ddbox {
+	border-bottom: 1px #c5c3c3 solid;
+}
+main#shoplist .dlbox .inner {
+    line-height: 1.3;
+	padding: 15px;
+}
+
+main#shoplist figure {
+    width: 200px;
+	float: left;
+}
+
+main#shoplist figure img {
+    width: 100%;
+	height: auto;
+}
+
+main#shoplist a[href^="tel:"] {
+	pointer-events: none;
+	cursor: text;
+	text-decoration: none;
+}
+
+}

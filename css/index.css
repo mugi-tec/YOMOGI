@@ -37,7 +37,6 @@ header section.mainvisual h1.logo {
     position: absolute;
     top: 0;
     left: 0;
-    filter: drop-shadow(0 0 4px #000);
 }
 
 header section.mainvisual h2.catchphrase {
